@@ -11,7 +11,7 @@ spring:
       mode: never
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ForBetterCoffee?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/local?serverTimezone=Asia/Seoul
     username: root
     password: 1234
 
@@ -19,9 +19,7 @@ spring:
   thymeleaf:
     prefix : classpath:/templates/
     suffix : .html
-    # thymeleaf? ?? ??? ??? ???. cache=false ??(???? true)
     cache : false
-    # templates ????? ??? ??? ??? ??, ??? ??? ?????.
     check-template-location : true
 
   #JPA Setting

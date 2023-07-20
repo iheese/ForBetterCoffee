@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout/default_layout}">
+      layout:decorate="~{/common/layout/default}">
 
 <th:block layout:fragment="head">
     <title>Spring Boot</title>
 
-    <!--/* 이 영역에 공통으로 사용할 css, js library를 선언한다. */-->
+    <!--/* css */-->
     <link th:href="@{/css/common.css}" rel="stylesheet" />
 </th:block>
 <body>
-<th:block layout:fragment="header" th:include="@{/layout/header}"></th:block>
+<th:block layout:fragment="header" th:include="@{/common/fragments/header}"></th:block>
 
 <div layout:fragment="content" class="content">
     <!-- Page content-->
     <div class="container-fluid">
-        <h1 class="mt-4">For Better Coffee</h1>
+        <h1 class="mt-4"></h1>
         <hr>
         <p>커피 레시피와 카페를 기록하는 사이트입니다.</p>
         <p>어제보다 오늘 맛있는 커피 한 잔을 위해</p>
     </div>
 </div>
-<th:block layout:fragment="footer" th:include="@{/layout/footer}"></th:block>
+
+<th:block layout:fragment="footer" th:include="@{/common/fragments/footer}"></th:block>
 </body>
 </html>
