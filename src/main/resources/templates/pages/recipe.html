@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/default}">
+
+    <th:block layout:fragment="content">
+    <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <h1 class="mt-4">Recipe</h1>
+            <hr>
+             <table>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+                <th>참가 인원</th>
+                <th>시작</th>
+                <th>종료</th>
+                <th>index 내용</th>
+            </tr>
+            <tr th:each="event , index: ${events}">
+                <td th:text="${index.index}">#</td>
+                <td th:text="${event.name}">이벤트 이름</td>
+                <td th:text="${event.limitOfEnrollment}">100</td>
+                <td th:text="${event.startDateTime}">2019년 1월 10일 오전 10시</td>
+                <td th:text="${event.endDateTime}">2019년 1월 10일 오전 12시</td>
+                <td th:text="${index}">index</td>
+            </tr>
+        </table>
+        </div>
+    </th:block>
+</html>
